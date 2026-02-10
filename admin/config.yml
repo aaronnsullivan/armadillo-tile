@@ -18,6 +18,7 @@ collections:
     # ... rest of your fields
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: ["gallery"]}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Alt Text", name: "alt", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown", required: false}

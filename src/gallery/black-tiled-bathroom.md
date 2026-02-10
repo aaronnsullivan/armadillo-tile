@@ -1,5 +1,6 @@
 ---
 title: Black Tiled Bathroom
+tags: gallery
 image: /images/blacktilebathroom.png
 alt: Black Tiled Bathroom
 ---
