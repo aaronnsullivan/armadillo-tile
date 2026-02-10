@@ -12,6 +12,8 @@ collections:
   - name: "gallery"
     label: "Gallery"
     folder: "src/gallery"
+    media_folder: "/images"
+    public_folder: "/images"
     create: true
     slug: "{{slug}}"
     fields:
