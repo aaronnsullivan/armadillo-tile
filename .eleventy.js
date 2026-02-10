@@ -1,12 +1,13 @@
 module.exports = function(eleventyConfig) {
-  // Use the relative path from the root
+  // Copies the CMS admin panel
   eleventyConfig.addPassthroughCopy("./admin"); 
-  eleventyConfig.addPassthroughCopy("./images");
-  eleventyConfig.addPassthroughCopy("src/gallery/**/*.{png,jpg,jpeg,webp,gif,svg}");
-// Add this line to your .eleventy.js
-eleventyConfig.addPassthroughCopy("src/gallery");
   
-  // Rest of your config...
+  // Copies the main images folder where the CMS is now saving photos
+  eleventyConfig.addPassthroughCopy("./images");
+  
+  // Copies the src/gallery folder so Eleventy can find the .md data files
+  eleventyConfig.addPassthroughCopy("src/gallery");
+  
   return {
     dir: {
       input: ".",

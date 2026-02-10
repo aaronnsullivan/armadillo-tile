@@ -1,8 +1,17 @@
+backend:
+  name: github
+  repo: aaronnsullivan/armadillo-tile
+  branch: master
+  base_url: https://armadillotile.com
+  auth_endpoint: api/auth
+
+media_folder: "images"
+public_folder: "/images"
+
 collections:
   - name: "gallery"
     label: "Gallery"
     folder: "src/gallery"
-    # REMOVE the media_folder and public_folder lines from here
     create: true
     slug: "{{slug}}"
     fields:
