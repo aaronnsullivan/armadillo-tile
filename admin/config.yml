@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master # This matches the branch name I saw in your terminal log
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    folder: "src/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Alt Text", name: "alt", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
