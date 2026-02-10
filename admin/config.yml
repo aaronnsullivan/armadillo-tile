@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
-  branch: master # This matches the branch name I saw in your terminal log
+  name: github
+  repo: aaronnsullivan/armadillo-tile
+  branch: master
+  base_url: https://armadillotile.com
+  auth_endpoint: api/auth
 
 media_folder: "images"
 public_folder: "/images"
