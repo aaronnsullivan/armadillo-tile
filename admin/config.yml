@@ -5,6 +5,7 @@ backend:
   base_url: https://armadillotile.com
   auth_endpoint: api/auth
 
+# Global paths: These are the "Truth" for the CMS
 media_folder: "images"
 public_folder: "/images"
 
@@ -12,10 +13,9 @@ collections:
   - name: "gallery"
     label: "Gallery"
     folder: "src/gallery"
-    media_folder: "../../images" # Tells CMS: Go up twice from src/gallery to find the images folder
-    public_folder: "/images"      # Tells CMS: Write the path in the .md file as /images/photo.png
     create: true
-    # ... rest of your fields
+    # REMOVE the local media_folder and public_folder lines from here
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Tags", name: "tags", widget: "hidden", default: ["gallery"]}
