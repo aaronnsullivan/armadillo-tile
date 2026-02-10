@@ -12,8 +12,10 @@ collections:
   - name: "gallery"
     label: "Gallery"
     folder: "src/gallery"
+    media_folder: "../../images" # Tells CMS: Go up twice from src/gallery to find the images folder
+    public_folder: "/images"      # Tells CMS: Write the path in the .md file as /images/photo.png
     create: true
-    slug: "{{slug}}"
+    # ... rest of your fields
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
