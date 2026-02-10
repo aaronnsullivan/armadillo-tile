@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: aaronnsullivan/armadillo-tile
+  branch: master
+  base_url: https://armadillotile.com
+  auth_endpoint: api/auth
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    folder: "src/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Alt Text", name: "alt", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
