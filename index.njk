@@ -1205,14 +1205,15 @@ body::before {
         </p>
       </div>
 
-      <div class="gallery-grid">
-       {% for item in collections.gallery %}
-  <article class="gallery-card">
-    <button class="gallery-thumb" type="button" data-full="{{ item.data.image }}" aria-label="View larger image">
-      <img src="{{ item.data.image }}" alt="{{ item.data.alt }}" class="cms-gallery-img">
-    </button>
-  </article>
-{% endfor %}
+     <div class="gallery-grid">
+  {% for item in collections.gallery %}
+    <article class="gallery-card">
+      {# Prepend /src/gallery/ so the browser knows where to find the file #}
+      <button class="gallery-thumb" type="button" data-full="/src/gallery/{{ item.data.image }}" aria-label="View larger image">
+        <img src="/src/gallery/{{ item.data.image }}" alt="{{ item.data.alt }}" class="cms-gallery-img">
+      </button>
+    </article>
+  {% endfor %}
 </div>
     </section>
     

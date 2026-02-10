@@ -3,6 +3,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./admin"); 
   eleventyConfig.addPassthroughCopy("./images");
   eleventyConfig.addPassthroughCopy("src/gallery/**/*.{png,jpg,jpeg,webp,gif,svg}");
+// Add this line to your .eleventy.js
+eleventyConfig.addPassthroughCopy("src/gallery");
   
   // Rest of your config...
   return {
