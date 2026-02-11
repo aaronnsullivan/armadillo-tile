@@ -4,24 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Armadillo Tile - Content Manager</title>
-  <link href="https://unpkg.com/static-cms-app@latest/dist/main.css" rel="stylesheet" />
-  <link rel="stylesheet" href="admin.css" />
+  <link href="https://cdn.jsdelivr.net/npm/@staticcms/core/dist/main.css" rel="stylesheet" />
 </head>
 <body>
-  <script src="https://unpkg.com/static-cms-app@latest/dist/main.js"></script>
-  
-  <script>
-    // Wait for StaticCms to load, then initialize
-    if (window.StaticCms) {
-      StaticCms.init();
-    } else {
-      // Fallback - initialize on window load
-      window.addEventListener('load', function() {
-        if (window.StaticCms) {
-          StaticCms.init();
-        }
-      });
-    }
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@staticcms/core/dist/main.js"></script>
 </body>
 </html>
