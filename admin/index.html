@@ -8,7 +8,17 @@
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   
-  <!-- Load CSS AFTER the script loads -->
-  <link rel="stylesheet" href="admin.css">
+  <script>
+    setTimeout(function() {
+      var style = document.createElement('style');
+      style.innerHTML = '#nc-root .nc-app-container { padding: 8px !important; } ' +
+        '#nc-root button[class*="StyledDropdownButton"] { background-color: #c86c3a !important; border-radius: 8px !important; color: white !important; } ' +
+        '#nc-root input, #nc-root textarea, #nc-root select { font-size: 16px !important; } ' +
+        '#nc-root div[class*="ControlContainer"]:nth-child(2) { display: none !important; } ' +
+        '#nc-root [class*="LoginButton"] { border: 2px solid #c86c3a !important; } ' +
+        '#nc-root div[class*="LoginPage"] { background-image: url(https://armadillotile.com/images/armadillobackground2.png) !important; background-repeat: repeat; }';
+      document.head.appendChild(style);
+    }, 2000);
+  </script>
 </body>
 </html>
