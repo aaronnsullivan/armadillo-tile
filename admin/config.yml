@@ -14,7 +14,7 @@ public_folder: "/images"
 
 collections:
   - name: "gallery"
-    label: "Click Here You Handsome Devil!"
+    label: "Photos. Love Ya Bud. Nice Hog."
     folder: "src/gallery"
     create: true
     # REMOVE the local media_folder and public_folder lines from here
