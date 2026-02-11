@@ -26,10 +26,13 @@ const config = {
   ]
 };
 
-// Wait for CMS to be available
+// Wait for StaticCmsApp to be available
 function initCMS() {
-  if (window.CMS) {
-    CMS.init({ config });
+  console.log('Checking for StaticCmsApp...', window.StaticCmsApp ? 'FOUND' : 'NOT FOUND');
+  
+  if (window.StaticCmsApp) {
+    console.log('Initializing StaticCmsApp with config');
+    window.StaticCmsApp.init({ config });
   } else {
     setTimeout(initCMS, 100);
   }

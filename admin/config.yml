@@ -2,11 +2,7 @@ backend:
   name: github
   repo: aaronnsullivan/armadillo-tile
   branch: master
-
-# Remove these lines:
-# base_url: https://armadillotile.com
-# auth_endpoint: api/auth
-# site_domain: armadillotile.com
+  auth_endpoint: api/auth
 
 display_url: https://armadillotile.com
 logo_url: https://armadillotile.com/images/armadillo.png
