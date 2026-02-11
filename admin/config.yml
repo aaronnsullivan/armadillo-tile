@@ -2,13 +2,15 @@ backend:
   name: github
   repo: aaronnsullivan/armadillo-tile
   branch: master
-  base_url: https://armadillotile.com
-  auth_endpoint: api/auth
-  site_domain: armadillotile.com
-  display_name: Load Your Photos Ya Sexy Little Slut
-  logo_url: https://armadillotile.com/images/armadillo.png
 
-# Global paths: These are the "Truth" for the CMS
+# Remove these lines:
+# base_url: https://armadillotile.com
+# auth_endpoint: api/auth
+# site_domain: armadillotile.com
+
+display_url: https://armadillotile.com
+logo_url: https://armadillotile.com/images/armadillo.png
+
 media_folder: "images"
 public_folder: "/images"
 
@@ -17,7 +19,6 @@ collections:
     label: "Photos. Love Ya Bud. Nice Hog."
     folder: "src/gallery"
     create: true
-    # REMOVE the local media_folder and public_folder lines from here
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
