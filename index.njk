@@ -493,29 +493,9 @@ body::before {
       gap: 0.75rem;
     }
  /* Target the logo inside the link when the link is hovered/active */
-.hero-card-link:hover .hero-card-logo {
-  transform: scale(1.08);
-  transition: transform 0.2s ease;
-}
-
-.hero-card-link:active .hero-card-logo {
-  transform: scale(0.95);
-}
-
-/* Ensure the logo itself has a transition so it moves smoothly */
-.hero-card-logo {
-  width: 150px;
-  height: 150px;
-  border-radius: 999px;
-  background: #545454;
-  border: 3px solid #111827;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 16px 32px rgba(0,0,0,0.25);
-  overflow: hidden;
-  transition: transform 0.2s ease; /* 👈 Add this line here */
-}
+    .hero-card-link { display: inline-block; cursor: pointer; }
+    .hero-card-link:hover .hero-card-logo { transform: scale(1.08); }
+    .hero-card-link:active .hero-card-logo { transform: scale(0.95); }
 
     .hero-card-logo {
       width: 150px;
@@ -528,6 +508,7 @@ body::before {
       justify-content: center;
       box-shadow: 0 16px 32px rgba(0,0,0,0.25);
       overflow: hidden;
+      transition: transform 0.2s ease;
     }
 
     .hero-card-logo img { width: 130px; height: 130px; display: block; }
@@ -1134,10 +1115,9 @@ body::before {
 
       <!-- Added hero-badge here to actually apply the flag background -->
       <aside class="hero-card hero-badge">
-  <a href="https://www.angi.com/companylist/us/md/taneytown/armadillo-tile-and-home-repair-reviews-10861081.htm" 
-     target="_blank" 
-     rel="noopener" 
-     style="text-decoration: none; display: block;">
+    <a class="hero-card-link" href="https://www.angi.com/companylist/us/md/taneytown/armadillo-tile-and-home-repair-reviews-10861081.htm" 
+      target="_blank" 
+      rel="noopener">
     <div class="hero-card-logo">
       <img src="images/armadillo.png" alt="Armadillo Contractor Mascot">
     </div>
