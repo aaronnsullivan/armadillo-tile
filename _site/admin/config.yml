@@ -2,10 +2,11 @@ backend:
   name: github
   repo: aaronnsullivan/armadillo-tile
   branch: master
-  base_url: https://armadillotile.com
-  auth_endpoint: api/auth
+  auth_endpoint: /api/auth
 
-# Global paths: These are the "Truth" for the CMS
+display_url: https://armadillotile.com
+logo_url: https://armadillotile.com/images/armadillo.png
+
 media_folder: "images"
 public_folder: "/images"
 
@@ -14,10 +15,12 @@ collections:
     label: "Gallery"
     folder: "src/gallery"
     create: true
-    # REMOVE the local media_folder and public_folder lines from here
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Alt Text", name: "alt", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: "tags", widget: "hidden", default: ["gallery"]}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Alt Text", name: "alt", widget: "string"}
