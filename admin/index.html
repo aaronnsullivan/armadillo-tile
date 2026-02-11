@@ -4,43 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Armadillo Tile - Content Manager</title>
-  <link rel="stylesheet" href="https://unpkg.com/@staticcms/app@2.6.0/dist/static-cms-app.css" />
+  <link href="https://unpkg.com/static-cms-app@latest/dist/main.css" rel="stylesheet" />
   <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
-  <script src="https://unpkg.com/@staticcms/app@2.6.0/dist/static-cms-app.js"></script>
+  <script src="https://unpkg.com/static-cms-app@latest/dist/main.js"></script>
   
   <script>
-    // Initialize Static CMS with config
-    window.StaticCmsApp.init({
-      config: {
-        backend: {
-          name: 'github',
-          repo: 'aaronnsullivan/armadillo-tile',
-          branch: 'master'
-        },
-        display_url: 'https://armadillotile.com',
-        logo_url: 'https://armadillotile.com/images/armadillo.png',
-        media_folder: 'images',
-        public_folder: '/images',
-        collections: [
-          {
-            name: 'gallery',
-            label: 'Photos. Love Ya Bud. Nice Hog.',
-            folder: 'src/gallery',
-            create: true,
-            slug: '{{slug}}',
-            fields: [
-              {label: 'Title', name: 'title', widget: 'string'},
-              {label: 'Tags', name: 'tags', widget: 'hidden', default: ['gallery']},
-              {label: 'Image', name: 'image', widget: 'image'},
-              {label: 'Alt Text', name: 'alt', widget: 'string'},
-              {label: 'Body', name: 'body', widget: 'markdown', required: false}
-            ]
-          }
-        ]
-      }
-    });
+    // Wait for StaticCms to load, then initialize
+    if (window.StaticCms) {
+      StaticCms.init();
+    } else {
+      // Fallback - initialize on window load
+      window.addEventListener('load', function() {
+        if (window.StaticCms) {
+          StaticCms.init();
+        }
+      });
+    }
   </script>
 </body>
 </html>
