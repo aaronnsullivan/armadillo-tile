@@ -1,8 +1,8 @@
 ---
-title: Framed Tile Under MIcrowave
+title: Framed Tile Under Microwave
 tags:
   - gallery
 image: /images/undermicrowave.png
-alt: Framed Tile Under MIcrowave
+alt: Framed Tile Under Microwave
 ---
-Framed Tile Under MIcrowave
+Framed Tile Under Microwave
