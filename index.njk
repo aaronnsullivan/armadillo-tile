@@ -492,19 +492,29 @@ body::before {
       text-align: center;
       gap: 0.75rem;
     }
-    /* Makes the logo feel like a button when you hover */
-.hero-card-link {
-  display: block;
+ /* Target the logo inside the link when the link is hovered/active */
+.hero-card-link:hover .hero-card-logo {
+  transform: scale(1.08);
   transition: transform 0.2s ease;
-  text-decoration: none;
 }
 
-.hero-card-link:hover {
-  transform: scale(1.08); /* Gives it a little 'pop' */
+.hero-card-link:active .hero-card-logo {
+  transform: scale(0.95);
 }
 
-.hero-card-link:active {
-  transform: scale(0.95); /* Squishes slightly when clicked */
+/* Ensure the logo itself has a transition so it moves smoothly */
+.hero-card-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background: #545454;
+  border: 3px solid #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+  overflow: hidden;
+  transition: transform 0.2s ease; /* 👈 Add this line here */
 }
 
     .hero-card-logo {
