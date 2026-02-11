@@ -26,4 +26,13 @@ const config = {
   ]
 };
 
-CMS.init({ config });
+// Wait for CMS to be available
+function initCMS() {
+  if (window.CMS) {
+    CMS.init({ config });
+  } else {
+    setTimeout(initCMS, 100);
+  }
+}
+
+initCMS();
