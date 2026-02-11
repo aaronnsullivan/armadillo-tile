@@ -2,6 +2,7 @@ backend:
   name: github
   repo: aaronnsullivan/armadillo-tile
   branch: master
+  auth_endpoint: /api/auth
 
 display_url: https://armadillotile.com
 logo_url: https://armadillotile.com/images/armadillo.png
