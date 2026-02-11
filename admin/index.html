@@ -6,19 +6,17 @@
   <title>Armadillo Tile - Content Manager</title>
 </head>
 <body>
-  <!-- Static CMS instead of Decap -->
-  <script src="https://unpkg.com/@staticcms/app@^2.0.0/dist/static-cms-app.js"></script>
+  <script src="https://unpkg.com/@staticcms/app@2.6.0/dist/static-cms-app.js"></script>
   
   <script>
-    // Wait for Static CMS to load, then inject custom styles
+    // Initialize Static CMS manually
+    window.CMS.init();
+    
+    // Inject custom styles after initialization
     setTimeout(function() {
       var style = document.createElement('style');
       style.innerHTML = 
-        '[class*="AppMainContainer"] { padding: 4px !important; } ' +
-        '[class*="CollectionContainer"] { padding: 4px !important; } ' +
-        'button { background-color: #c86c3a !important; border-radius: 8px !important; color: white !important; } ' +
-        'input, textarea, select { font-size: 16px !important; } ' +
-        '[class*="LoginPage"] { background-image: url(https://armadillotile.com/images/armadillobackground2.png) !important; background-repeat: repeat; }';
+        'button { background-color: #c86c3a !important; color: white !important; }';
       document.head.appendChild(style);
       console.log('Custom styles loaded');
     }, 2000);
