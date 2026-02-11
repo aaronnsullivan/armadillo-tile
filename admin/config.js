@@ -2,7 +2,8 @@ const config = {
   backend: {
     name: 'github',
     repo: 'aaronnsullivan/armadillo-tile',
-    branch: 'master'
+    branch: 'master',
+    auth_endpoint: 'api/auth'
   },
   display_url: 'https://armadillotile.com',
   logo_url: 'https://armadillotile.com/images/armadillo.png',
@@ -26,16 +27,16 @@ const config = {
   ]
 };
 
-// Wait for StaticCmsApp to be available
-function initCMS() {
-  console.log('Checking for StaticCmsApp...', window.StaticCmsApp ? 'FOUND' : 'NOT FOUND');
-  
-  if (window.StaticCmsApp) {
-    console.log('Initializing StaticCmsApp with config');
-    window.StaticCmsApp.init({ config });
-  } else {
-    setTimeout(initCMS, 100);
-  }
-}
+console.log('Window keys containing CMS or Static:', Object.keys(window).filter(k => k.includes('CMS') || k.includes('Static')));
 
-initCMS();
+// Static CMS looks for window.StaticCmsApp
+if (window.StaticCmsApp) {
+  window.StaticCmsApp.init({ config });
+  console.log('StaticCmsApp initialized');
+} else if (window.CMS) {
+  window.CMS.init({ config });
+  console.log('CMS initialized');
+} else {
+  console.error('No CMS library found');
+  console.log('All window keys:', Object.keys(window).sort());
+}
