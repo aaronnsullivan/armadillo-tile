@@ -4,13 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Armadillo Tile - Robb You're Sexier Than You Think Bud</title>
-  <link rel="stylesheet" href="/admin/admin.css" />
+  <style>
+    /* admin/admin.css styles moved inline */
+    
+    /* 1. Fix the 'nasty' padding on mobile */
+    .nc-app-container {
+      padding: 8px !important;
+    }
+
+    /* 2. Make the 'Publish' buttons actually look like buttons */
+    button[class*="StyledDropdownButton"] {
+      background-color: #c86c3a !important; /* Clay color */
+      border-radius: 8px !important;
+      color: white !important;
+    }
+
+    /* 3. Stop the tiny text zoom-in bug on iPhone */
+    input, textarea, select {
+      font-size: 16px !important;
+    }
+
+    /* 4. Hide that 'Tags' field so it doesn't clutter the UI */
+    div[class*="ControlContainer"]:nth-child(2) {
+      display: none !important;
+    }
+
+    /* Custom login background */
+    #nc-root [class*="LoginButton"] {
+      border: 2px solid #c86c3a !important;
+    }
+
+    #nc-root div[class*="LoginPage"] {
+      background-image: url("https://armadillotile.com/images/armadillobackground2.png") !important;
+      background-repeat: repeat;
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  
-  <script>
-    CMS.registerPreviewStyle("admin.css");
-  </script>
 </body>
 </html>
