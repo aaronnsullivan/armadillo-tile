@@ -4,6 +4,9 @@ backend:
   branch: master
   base_url: https://armadillotile.com
   auth_endpoint: api/auth
+  site_domain: armadillotile.com
+  display_name: Load Your Photos Ya Sexy Little Slut
+  logo_url: https://armadillotile.com/images/armadillo.png
 
 # Global paths: These are the "Truth" for the CMS
 media_folder: "images"
@@ -11,7 +14,7 @@ public_folder: "/images"
 
 collections:
   - name: "gallery"
-    label: "Gallery"
+    label: "Click Here You Handsome Devil!"
     folder: "src/gallery"
     create: true
     # REMOVE the local media_folder and public_folder lines from here

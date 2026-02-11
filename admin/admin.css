@@ -1,0 +1,35 @@
+/* admin/admin.css */
+
+/* 1. Fix the 'nasty' padding on mobile */
+.nc-app-container {
+  padding: 8px !important;
+}
+
+/* 2. Make the 'Publish' buttons actually look like buttons */
+button[class*="StyledDropdownButton"] {
+  background-color: #c86c3a !important; /* Clay color */
+  border-radius: 8px !important;
+  color: white !important;
+}
+
+/* 3. Stop the tiny text zoom-in bug on iPhone */
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+/* 4. Hide that 'Tags' field so it doesn't clutter the UI */
+/* We target the 2nd field in the gallery collection (the hidden tags) */
+div[class*="ControlContainer"]:nth-child(2) {
+  display: none !important;
+}
+
+/* Custom login background */
+#nc-root [class*="LoginButton"] {
+  border: 2px solid #c86c3a !important;
+}
+
+/* This targets the login container */
+#nc-root div[class*="LoginPage"] {
+  background-image: url("https://armadillotile.com/images/armadillobackground2.png") !important;
+  background-repeat: repeat;
+}
