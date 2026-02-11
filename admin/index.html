@@ -4,22 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Armadillo Tile - Content Manager</title>
+  <link rel="stylesheet" href="https://unpkg.com/@staticcms/app@2.6.0/dist/static-cms-app.css" />
+  <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
   <script src="https://unpkg.com/@staticcms/app@2.6.0/dist/static-cms-app.js"></script>
   
   <script>
-    // Initialize Static CMS manually
-    window.CMS.init();
-    
-    // Inject custom styles after initialization
-    setTimeout(function() {
-      var style = document.createElement('style');
-      style.innerHTML = 
-        'button { background-color: #c86c3a !important; color: white !important; }';
-      document.head.appendChild(style);
-      console.log('Custom styles loaded');
-    }, 2000);
+    // Initialize Static CMS with config
+    window.StaticCmsApp.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'aaronnsullivan/armadillo-tile',
+          branch: 'master'
+        },
+        display_url: 'https://armadillotile.com',
+        logo_url: 'https://armadillotile.com/images/armadillo.png',
+        media_folder: 'images',
+        public_folder: '/images',
+        collections: [
+          {
+            name: 'gallery',
+            label: 'Photos. Love Ya Bud. Nice Hog.',
+            folder: 'src/gallery',
+            create: true,
+            slug: '{{slug}}',
+            fields: [
+              {label: 'Title', name: 'title', widget: 'string'},
+              {label: 'Tags', name: 'tags', widget: 'hidden', default: ['gallery']},
+              {label: 'Image', name: 'image', widget: 'image'},
+              {label: 'Alt Text', name: 'alt', widget: 'string'},
+              {label: 'Body', name: 'body', widget: 'markdown', required: false}
+            ]
+          }
+        ]
+      }
+    });
   </script>
 </body>
 </html>
