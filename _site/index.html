@@ -413,6 +413,7 @@ body::before {
       background: rgba(255,255,255,0.9);
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       width: 100%;
+      cursor: pointer;
     }
 
     .hero-pill-dot {
@@ -492,6 +493,10 @@ body::before {
       text-align: center;
       gap: 0.75rem;
     }
+ /* Target the logo inside the link when the link is hovered/active */
+    .hero-card-link { display: inline-block; cursor: pointer; }
+    .hero-card-link:hover .hero-card-logo { transform: scale(1.08); }
+    .hero-card-link:active .hero-card-logo { transform: scale(0.95); }
 
     .hero-card-logo {
       width: 150px;
@@ -504,6 +509,7 @@ body::before {
       justify-content: center;
       box-shadow: 0 16px 32px rgba(0,0,0,0.25);
       overflow: hidden;
+      transition: transform 0.2s ease;
     }
 
     .hero-card-logo img { width: 130px; height: 130px; display: block; }
@@ -1080,22 +1086,22 @@ body::before {
         </div>
 
         <div class="hero-bullets">
-          <div class="hero-pill">
+          <a class="hero-pill" href="#gallery">
             <span class="hero-pill-dot"></span>
             Showers, Surrounds, & Bathroom Tile
-          </div>
-          <div class="hero-pill">
+          </a>
+          <a class="hero-pill" href="#gallery">
             <span class="hero-pill-dot"></span>
             Kitchen Backsplashes & Floors
-          </div>
-          <div class="hero-pill">
+          </a>
+          <a class="hero-pill" href="#gallery">
             <span class="hero-pill-dot"></span>
             Repairs, Regrout, & Punch List Work
-          </div>
-          <div class="hero-pill">
+          </a>
+          <a class="hero-pill" href="#gallery">
             <span class="hero-pill-dot"></span>
             & The List Goes On!
-          </div>
+          </a>
         </div>
 
         <div class="hero-actions">
@@ -1110,9 +1116,13 @@ body::before {
 
       <!-- Added hero-badge here to actually apply the flag background -->
       <aside class="hero-card hero-badge">
-        <div class="hero-card-logo">
-          <img src="images/armadillo.png" alt="Armadillo Contractor Mascot">
-        </div>
+    <a class="hero-card-link" href="https://www.angi.com/companylist/us/md/taneytown/armadillo-tile-and-home-repair-reviews-10861081.htm" 
+      target="_blank" 
+      rel="noopener">
+    <div class="hero-card-logo">
+      <img src="images/armadillo.png" alt="Armadillo Contractor Mascot">
+    </div>
+  </a>
         <div class="hero-card-title">Armadillo Tile</div>
         <div class="hero-card-sub">and Home Repair</div>
         <a class="hero-card-phone" href="tel:+16673676001">(667) 367-6001</a>
@@ -1205,14 +1215,32 @@ body::before {
         </p>
       </div>
 
-      <div class="gallery-grid">
-       
-  <article class="gallery-card">
-    <button class="gallery-thumb" type="button" data-full="/images/birdseyekitchen.png" aria-label="View larger image">
-      <img src="/images/birdseyekitchen.png" alt="A beautiful tile floor" class="cms-gallery-img">
-    </button>
-  </article>
-
+    <div class="gallery-grid">
+  
+    <article class="gallery-card">
+      <button class="gallery-thumb" type="button" data-full="/images/birdseyekitchen.png" aria-label="View larger image">
+        <img src="/images/birdseyekitchen.png" alt="Beautifully Tiled Floor" class="cms-gallery-img">
+      </button>
+    </article>
+  
+    <article class="gallery-card">
+      <button class="gallery-thumb" type="button" data-full="/images/blacktilebathroom.png" aria-label="View larger image">
+        <img src="/images/blacktilebathroom.png" alt="Black Tiled Bathroom" class="cms-gallery-img">
+      </button>
+    </article>
+  
+    <article class="gallery-card">
+      <button class="gallery-thumb" type="button" data-full="/images/undermicrowave.png" aria-label="View larger image">
+        <img src="/images/undermicrowave.png" alt="Framed Tile Under Microwave" class="cms-gallery-img">
+      </button>
+    </article>
+  
+    <article class="gallery-card">
+      <button class="gallery-thumb" type="button" data-full="/images/intricatetile.png" aria-label="View larger image">
+        <img src="/images/intricatetile.png" alt="Tiled Bathroom" class="cms-gallery-img">
+      </button>
+    </article>
+  
 </div>
     </section>
     
@@ -1328,7 +1356,7 @@ body::before {
       © <span id="year"></span> Armadillo Tile and Home Repair • One Small Crew, One Solid Shell Of Work • All Rights Reserved.
     </p>
     <p class="footer-small">
-      Site Design and Build by A Sulli.
+      Site Design and Build by <a href="https://asulli.com/biz">A Sulli</a>.
     </p>
   </footer>
 
