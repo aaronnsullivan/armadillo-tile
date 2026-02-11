@@ -1,25 +1,27 @@
 /* admin/admin.css */
 
 /* 1. Fix the 'nasty' padding on mobile */
-.nc-app-container {
+#nc-root .nc-app-container {
   padding: 8px !important;
 }
 
 /* 2. Make the 'Publish' buttons actually look like buttons */
-button[class*="StyledDropdownButton"] {
+#nc-root button[class*="StyledDropdownButton"] {
   background-color: #c86c3a !important; /* Clay color */
   border-radius: 8px !important;
   color: white !important;
 }
 
 /* 3. Stop the tiny text zoom-in bug on iPhone */
-input, textarea, select {
+#nc-root input,
+#nc-root textarea,
+#nc-root select {
   font-size: 16px !important;
 }
 
 /* 4. Hide that 'Tags' field so it doesn't clutter the UI */
 /* We target the 2nd field in the gallery collection (the hidden tags) */
-div[class*="ControlContainer"]:nth-child(2) {
+#nc-root div[class*="ControlContainer"]:nth-child(2) {
   display: none !important;
 }
 
