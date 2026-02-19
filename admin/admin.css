@@ -1,11 +1,12 @@
-/* Decap CMS Mobile-First Overrides */
+/* =============================================
+   Armadillo Tile - Decap CMS Mobile Overrides
+   ============================================= */
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -14,145 +15,224 @@ body {
   background-image: url('https://armadillotile.com/images/armadillobackground2.png') !important;
   background-repeat: repeat !important;
   background-attachment: fixed !important;
-  background-size: auto !important;
 }
 
-#root,
-#nc-root {
-  width: 100% !important;
-  height: 100% !important;
+/* ---- LOGIN SCREEN ---- */
+[class*="AuthenticationPage"],
+[data-testid="login-page"] {
   background-image: url('https://armadillotile.com/images/armadillobackground2.png') !important;
   background-repeat: repeat !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
 }
 
-/* All buttons */
-button,
-[role='button'] {
-  font-size: 16px !important;
+[class*="AuthenticationPage"] button,
+[class*="login"] button {
   background-color: #c86c3a !important;
   color: white !important;
+  font-size: 18px !important;
+  padding: 16px 32px !important;
+  min-height: 54px !important;
+  border-radius: 6px !important;
   border: none !important;
-  padding: 12px 16px !important;
-  min-height: 44px !important;
+  width: 100% !important;
+  max-width: 320px !important;
   cursor: pointer !important;
-  border-radius: 4px !important;
 }
 
-button:hover,
-[role='button']:hover {
-  background-color: #a85630 !important;
+/* ---- APP HEADER / TOP BAR ---- */
+header,
+[class*="Header"],
+[class*="Topbar"],
+nav[role="navigation"] {
+  background-color: #2d2d2d !important;
+  color: white !important;
+  padding: 0 12px !important;
+  min-height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+  width: 100% !important;
 }
 
-/* Inputs and text areas */
-input,
+/* ---- SIDEBAR / NAV ---- */
+[class*="Sidebar"],
+[class*="CollectionList"] {
+  background-color: rgba(255,255,255,0.97) !important;
+}
+
+@media (max-width: 800px) {
+  [class*="Sidebar"],
+  [class*="CollectionList"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ---- MAIN CONTENT AREA ---- */
+[class*="Container"],
+[class*="AppMainContainer"],
+main {
+  background: transparent !important;
+}
+
+/* Collection entry cards */
+[class*="ListCard"],
+[class*="EntryCard"],
+[class*="Card"] {
+  background: rgba(255,255,255,0.95) !important;
+  border-radius: 8px !important;
+  margin-bottom: 12px !important;
+  padding: 16px !important;
+  width: 100% !important;
+}
+
+/* ---- EDITOR ---- */
+[class*="EditorContainer"],
+[class*="Editor"],
+[class*="ControlPane"] {
+  background: rgba(255,255,255,0.97) !important;
+  border-radius: 0 !important;
+  padding: 16px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ---- ALL INPUTS / FIELDS ---- */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
 textarea,
 select {
   font-size: 16px !important;
   padding: 12px !important;
-  min-height: 44px !important;
+  min-height: 48px !important;
   border: 1px solid #ccc !important;
-  border-radius: 4px !important;
+  border-radius: 6px !important;
   width: 100% !important;
-  box-sizing: border-box !important;
+  background: white !important;
+  -webkit-appearance: none !important;
 }
 
-/* Mobile viewport fix */
-@viewport {
-  width: device-width;
-  zoom: 1;
+textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
 }
 
-/* Mobile styles */
-@media (max-width: 1024px) {
-  body,
-  html {
-    background-image: url('https://armadillotile.com/images/armadillobackground2.png') !important;
-    background-repeat: repeat !important;
-  }
+/* ---- BUTTONS ---- */
+button,
+[role="button"] {
+  font-size: 16px !important;
+  min-height: 48px !important;
+  padding: 12px 20px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+}
 
-  /* Maximize content area */
-  [class*='FrameContainer'],
-  [class*='Container'],
-  [class*='App'] {
-    width: 100vw !important;
-    height: 100vh !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+button[class*="success"],
+button[class*="primary"],
+button[class*="Publish"],
+button[class*="Save"] {
+  background-color: #c86c3a !important;
+  color: white !important;
+  border: none !important;
+}
 
-  /* Stack layout vertically */
-  [class*='Sidebar'] {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
+button[class*="success"]:hover,
+button[class*="primary"]:hover {
+  background-color: #a85630 !important;
+}
+
+/* ---- MEDIA / IMAGE UPLOADER ---- */
+[class*="MediaLibrary"],
+[class*="ImageCard"],
+[class*="media-library"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+[class*="ImageCard"] img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
+[class*="FileUploadButton"],
+input[type="file"] {
+  width: 100% !important;
+  min-height: 54px !important;
+  font-size: 16px !important;
+}
+
+/* ---- MARKDOWN EDITOR ---- */
+[class*="MarkdownEditor"],
+[class*="CodeMirror"],
+.cm-editor {
+  font-size: 16px !important;
+  min-height: 200px !important;
+  width: 100% !important;
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 800px) {
+
+  [class*="Container"],
+  [class*="Pane"],
+  [class*="Column"] {
     width: 100% !important;
-    height: auto !important;
-    max-height: 60px !important;
-    z-index: 1000 !important;
-    background: rgba(255, 255, 255, 0.95) !important;
+    max-width: 100% !important;
+    float: none !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
   }
 
-  [class*='Main'],
-  [class*='Editor'] {
-    margin-top: 70px !important;
+  /* Hide preview pane - useless on mobile */
+  [class*="PreviewPane"],
+  [class*="EditorPreview"] {
+    display: none !important;
+  }
+
+  [class*="ControlPane"],
+  [class*="EditorControlPane"] {
     width: 100% !important;
-    padding: 10px !important;
+    max-width: 100% !important;
+    border-right: none !important;
   }
 
-  /* Full-width forms */
-  form {
-    width: 100% !important;
-    padding: 10px !important;
-  }
-
-  /* Make fields stack */
-  [class*='Field'],
-  [class*='Group'] {
-    width: 100% !important;
-    margin-bottom: 15px !important;
-  }
-
-  /* Bigger touch targets */
-  input,
-  textarea,
-  select,
-  button {
+  button,
+  [role="button"],
+  a {
     min-height: 48px !important;
-    font-size: 16px !important;
-    padding: 14px !important;
+    min-width: 48px !important;
   }
 
-  /* Hide unnecessary sidebar items */
-  [class*='Nav'] {
-    display: flex !important;
-    flex-direction: row !important;
-    overflow-x: auto !important;
+  [class*="Toolbar"],
+  [class*="EditorToolbar"] {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+
+  /* 2 column image grid on mobile */
+  [class*="CardGrid"],
+  [class*="ImageGrid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    padding: 8px !important;
   }
 }
 
-/* Extra small phones */
 @media (max-width: 480px) {
-  body {
-    font-size: 14px !important;
-  }
-
-  input,
-  textarea,
-  select,
-  button {
-    font-size: 16px !important;
-    min-height: 50px !important;
-    padding: 16px !important;
-  }
-
-  [class*='Sidebar'] {
-    max-height: 50px !important;
-  }
-
-  [class*='Main'],
-  [class*='Editor'] {
-    margin-top: 60px !important;
-    padding: 8px !important;
+  [class*="CardGrid"],
+  [class*="ImageGrid"] {
+    grid-template-columns: 1fr !important;
   }
 }
 
