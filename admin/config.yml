@@ -1,8 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: aaronnsullivan/armadillo-tile
   branch: master
-  api_root: "https://api.github.com"
-  auth_token_path: ""
+  auth_endpoint: api/auth
 
 display_url: https://armadillotile.com
 logo_url: https://armadillotile.com/images/armadillo.png

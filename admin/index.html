@@ -4,22 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Armadillo Tile - Content Manager</title>
-  <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@decapcms/app@latest/dist/decap-cms.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hithismani/responsive-decap@main/dist/responsive.css" />
   <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
   <script>
-    // Override any default Netlify config before CMS loads
+    // Override Netlify provider before loading
     window.CMS_CONFIG = {
       backend: {
         name: 'github',
         repo: 'aaronnsullivan/armadillo-tile',
-        branch: 'master',
-        auth_endpoint: 'api/auth'
+        branch: 'master'
       }
     };
   </script>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@decapcms/app@latest/dist/decap-cms.js"></script>
 </body>
 </html>
