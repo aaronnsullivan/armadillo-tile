@@ -947,20 +947,24 @@ body::before {
 }
 
 /* Fix list layout inside centered contact mini cards */
+.contact-mini-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .contact-mini-card ul {
   list-style: disc;
   padding-left: 1.2rem;
   margin: 0.4rem auto 0;
   text-align: left;
+  max-width: 100%;
 }
 
 .contact-mini-card li {
-  white-space: nowrap;
-}
-@media (max-width: 420px) {
-  .contact-mini-card li {
-    white-space: normal;
-  }
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 @media (max-width: 768px) {
   .contact-note {
