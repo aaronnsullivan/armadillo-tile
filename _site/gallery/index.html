@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse examples of tile and home repair work from Armadillo Tile and Home Repair.">
+  <title>Project Gallery | Armadillo Tile and Home Repair</title>
+  <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/images/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" type="image/svg+xml" href="/images/armadillo.svg">
+  <link rel="stylesheet" href="/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/" aria-label="Armadillo Tile and Home Repair home">
+        <span class="site-brand-logo"><img src="/images/armadillo.svg" alt=""></span>
+        <span class="site-brand-name">Armadillo Tile<small>and Home Repair</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+        <a href="/services/">Services</a>
+        <a href="/how-it-works/">How It Works</a>
+        <a href="/gallery/">Work</a>
+        <a href="/about/">About</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="/service-areas/">Areas</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/contact/">Get A Free Estimate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    
+<section class="page-intro">
+  <p class="eyebrow">Our Work</p>
+  <h1>Examples Of Our Work</h1>
+  <p>A few examples of tile projects. Every home and project is different; get in touch to talk through yours.</p>
+</section>
+
+<section class="gallery-grid" aria-label="Project photos">
+  <article class="gallery-card">
+    <a href="/images/birdseyekitchen.png"><img src="/images/birdseyekitchen.png" alt="Bird's-eye view of a freshly tiled kitchen" loading="lazy"></a>
+    <p class="gallery-caption">Kitchen Tile</p>
+  </article>
+  <article class="gallery-card">
+    <a href="/images/blacktilebathroom.png"><img src="/images/blacktilebathroom.png" alt="Black tiled bathroom" loading="lazy"></a>
+    <p class="gallery-caption">Black Tiled Bathroom</p>
+  </article>
+  <article class="gallery-card">
+    <a href="/images/undermicrowave.png"><img src="/images/undermicrowave.png" alt="Framed tile under a microwave" loading="lazy"></a>
+    <p class="gallery-caption">Framed Kitchen Tile</p>
+  </article>
+  <article class="gallery-card">
+    <a href="/images/intricatetile.png"><img src="/images/intricatetile.png" alt="Intricately tiled bathroom floor" loading="lazy"></a>
+    <p class="gallery-caption">Bathroom Floor Tile</p>
+  </article>
+</section>
+
+<div class="action-row">
+  <a class="button-link" href="/contact/">Talk About Your Project</a>
+  <a class="button-link button-link-secondary" href="/reviews/">Read Google Reviews</a>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="footer-brand" href="/">Armadillo Tile and Home Repair</a>
+        <p>One small crew. One solid shell of work.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/how-it-works/">How It Works</a>
+        <a href="/gallery/">Work</a>
+        <a href="/about/">About</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="/service-areas/">Service Areas</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:+16673676001">(667) 367-6001</a>
+        <a href="mailto:armadillotile@gmail.com">armadillotile@gmail.com</a>
+      </div>
+    </div>
+    <p class="copyright">© <span class="current-year"></span> Armadillo Tile and Home Repair · All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const siteNav = document.querySelector(".site-nav");
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+      siteNav.classList.toggle("is-open", !isOpen);
+    });
+    siteNav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+        siteNav.classList.remove("is-open");
+      }
+    });
+    document.querySelectorAll(".current-year").forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

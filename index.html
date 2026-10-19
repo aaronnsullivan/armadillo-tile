@@ -27,15 +27,16 @@
     },
     {
       "@type": "AdministrativeArea",
-      "name": "Frederick County, MD"
-    },
-    {
       "@type": "AdministrativeArea",
       "name": "Howard County, MD"
     },
     {
       "@type": "AdministrativeArea",
       "name": "Baltimore County, MD"
+    },
+    {
+      "@type": "City",
+      "name": "Baltimore, MD"
     }
   ],
   "sameAs": [
@@ -431,6 +432,10 @@ body::before {
       margin-bottom: 0.4rem;
     }
 
+    .reviews-actions {
+      justify-content: center;
+    }
+
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -709,14 +714,6 @@ body::before {
   padding: 0;
   cursor: pointer;
   display: block;
-}
-
-.cms-gallery-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover; /* This fills the box without squishing the photo */
-  transition: transform 0.18s ease;
 }
 
     .gallery-thumb img {
@@ -1031,12 +1028,15 @@ body::before {
       </a>
 
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#gallery">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="services/">Services</a>
+        <a href="how-it-works/">How It Works</a>
+        <a href="gallery/">Work</a>
+        <a href="about/">About</a>
+        <a href="reviews/">Reviews</a>
+        <a href="service-areas/">Areas</a>
+        <a href="contact/">Contact</a>
         <a
-          href="https://www.angi.com/companylist/us/md/taneytown/armadillo-tile-and-home-repair-reviews-10861081.htm"
+          href="contact/"
           class="nav-cta"
           target="_blank"
           rel="noopener"
@@ -1058,11 +1058,14 @@ body::before {
   <button class="mobile-nav-close" type="button" aria-label="Close menu" data-close="true">×</button>
 
   <div class="mobile-nav-links">
-    <a href="#services">Services</a>
-    <a href="#gallery">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a class="mobile-nav-cta" href="https://www.angi.com/companylist/us/md/taneytown/armadillo-tile-and-home-repair-reviews-10861081.htm" target="_blank" rel="noopener">Get Quote Now</a>
+    <a href="services/">Services</a>
+    <a href="how-it-works/">How It Works</a>
+    <a href="gallery/">Work</a>
+    <a href="about/">About</a>
+    <a href="reviews/">Reviews</a>
+    <a href="service-areas/">Service Areas</a>
+    <a href="contact/">Contact</a>
+    <a class="mobile-nav-cta" href="contact/">Get Quote Now</a>
   </div>
 
   <div class="mobile-nav-footer">
@@ -1223,33 +1226,50 @@ body::before {
   
     <article class="gallery-card">
       <button class="gallery-thumb" type="button" data-full="/images/birdseyekitchen.png" aria-label="View larger image">
-        <img src="/images/birdseyekitchen.png" alt="Beautifully Tiled Floor" class="cms-gallery-img">
+        <img src="/images/birdseyekitchen.png" alt="Beautifully Tiled Floor">
       </button>
     </article>
   
     <article class="gallery-card">
       <button class="gallery-thumb" type="button" data-full="/images/blacktilebathroom.png" aria-label="View larger image">
-        <img src="/images/blacktilebathroom.png" alt="Black Tiled Bathroom" class="cms-gallery-img">
+        <img src="/images/blacktilebathroom.png" alt="Black Tiled Bathroom">
       </button>
     </article>
   
     <article class="gallery-card">
       <button class="gallery-thumb" type="button" data-full="/images/undermicrowave.png" aria-label="View larger image">
-        <img src="/images/undermicrowave.png" alt="Framed Tile Under Microwave" class="cms-gallery-img">
+        <img src="/images/undermicrowave.png" alt="Framed Tile Under Microwave">
       </button>
     </article>
   
     <article class="gallery-card">
       <button class="gallery-thumb" type="button" data-full="/images/intricatetile.png" aria-label="View larger image">
-        <img src="/images/intricatetile.png" alt="Tiled Bathroom" class="cms-gallery-img">
+        <img src="/images/intricatetile.png" alt="Tiled Bathroom">
       </button>
     </article>
   
 </div>
     </section>
+
+<section class="section" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Google Reviews</div>
+    <p class="section-sub">
+      Read feedback from Armadillo customers.
+    </p>
+  </div>
+  <div class="reviews-widget">
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-74d1bd98-4e80-42f9-8ea7-f212b49e25e2" data-elfsight-app-lazy></div>
+  </div>
+  <div class="hero-actions reviews-actions">
+    <a href="reviews/" class="btn-primary">Read All Google Reviews</a>
+    <a href="contact/" class="btn-ghost">Get A Free Estimate</a>
+  </div>
+</section>
     
 
-    <!-- CONTACT -->
+<!-- CONTACT -->
     <section class="section" id="contact">
       <div class="section-header">
         <div class="section-eyebrow">Contact</div>
@@ -1334,9 +1354,9 @@ body::before {
 <aside class="contact-mini-card service-areas-card">
     <strong>Service Areas</strong>
 <ul>
-  <li>Based in Taneytown, MD.</li>
-  <li>Serving Carroll, Frederick, Howard, and Baltimore Counties.</li>
-  <li>Most projects within roughly a 50-mile radius.</li>
+  <li>Based in Baltimore City, MD.</li>
+  <li>Focused on Baltimore City and County.</li>
+  <li>Also serving Carroll and Howard Counties.</li>
   <li>Have a project outside that range? Reach out anyway to check!</li>
 </ul>
 </aside>

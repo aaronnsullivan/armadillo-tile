@@ -1,0 +1,20 @@
+{% extends "layouts/base.njk" %}
+{% block title %}Google Reviews | Armadillo Tile and Home Repair{% endblock %}
+{% block description %}Read customer reviews for Armadillo Tile and Home Repair.{% endblock %}
+{% block content %}
+<section class="page-intro">
+  <p class="eyebrow">Customer Reviews</p>
+  <h1>Google Reviews</h1>
+  <p>Read feedback from Armadillo customers, shared directly from Google.</p>
+</section>
+
+<section class="reviews-widget" aria-label="Google reviews">
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-74d1bd98-4e80-42f9-8ea7-f212b49e25e2" data-elfsight-app-lazy></div>
+</section>
+
+<div class="action-row reviews-page-actions">
+  <a class="button-link" href="/contact/">Get A Free Estimate</a>
+  <a class="button-link button-link-secondary" href="/services/">Explore Services</a>
+</div>
+{% endblock %}

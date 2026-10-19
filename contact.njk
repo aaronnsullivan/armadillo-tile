@@ -1,0 +1,51 @@
+{% extends "layouts/base.njk" %}
+{% block title %}Contact | Armadillo Tile and Home Repair{% endblock %}
+{% block description %}Request a free estimate from Armadillo Tile and Home Repair. Call, email, or tell us about your project online.{% endblock %}
+{% block content %}
+<section class="page-intro">
+  <p class="eyebrow">Get In Touch</p>
+  <h1>Tell Us What You Need Fixed</h1>
+  <p>A few details and a couple of photos go a long way. Tell us about the project and we will follow up with next steps and honest ballpark pricing.</p>
+</section>
+
+<section class="contact-layout">
+  <div class="form-card">
+    <h2>Request A Quote</h2>
+    <form class="quote-form" action="https://formsubmit.co/armadillotile@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Quote Request From Armadillo Tile Site">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" hidden>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Your name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" placeholder="Best number to reach you">
+      </div>
+      <div>
+        <label for="location">City Or Neighborhood</label>
+        <input id="location" type="text" name="location" placeholder="Where the project is">
+      </div>
+      <div>
+        <label for="details">Project Details</label>
+        <textarea id="details" name="details" placeholder="Shower redo, backsplash, small repair, etc." required></textarea>
+      </div>
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+
+  <aside class="info-card contact-info">
+    <h2>Contact Info</h2>
+    <p><strong>Phone:</strong> <a href="tel:+16673676001">(667) 367-6001</a></p>
+    <p><strong>Email:</strong> <a href="mailto:armadillotile@gmail.com">armadillotile@gmail.com</a></p>
+    <p><strong>Hours:</strong> Availability varies. Call or text to schedule an appointment.</p>
+    <p><strong>Service area:</strong> Baltimore City and County, plus Carroll and Howard Counties.</p>
+    <a class="button-link button-link-secondary" href="https://www.angi.com/companylist/us/md/taneytown/armadillo-tile-and-home-repair-reviews-10861081.htm" target="_blank" rel="noopener">Request A Quote On Angi</a>
+  </aside>
+</section>
+{% endblock %}
